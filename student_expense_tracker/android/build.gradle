@@ -18,13 +18,15 @@ tasks.register("clean", Delete) {
 }
 
 buildscript {
+    ext.kotlin_version = '1.7.20' // or the latest version
     repositories {
         google() //Add this if missing
         mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:8.1.2' // Ensure Gradle is up to date
+        classpath 'com.android.tools.build:gradle:8.2.1' // Ensure Gradle is up to date
         classpath 'com.google.gms:google-services:4.4.2' // Firebase plugin
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
 
